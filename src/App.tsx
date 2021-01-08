@@ -1,11 +1,8 @@
 import * as React from 'react';
+import CounterContainer from './components/CounterContainer';
 
 const App = () => {
-  return (
-    <div>
-      <h1>App</h1>
-    </div>
-  );
+  return <CounterContainer />;
 };
 
 export default App;
