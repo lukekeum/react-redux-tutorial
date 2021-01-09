@@ -5,14 +5,15 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import rootReducers from './modules';
-import logger from './middlewares/myLogger';
+import myLogger from './middlewares/myLogger';
+import logger from 'redux-logger';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(
   rootReducers,
-  composeWithDevTools(applyMiddleware(logger))
+  composeWithDevTools(applyMiddleware(logger, myLogger))
 );
 
 ReactDOM.render(
