@@ -1,5 +1,5 @@
-const INCREASE = 'increase';
-const DECREASE = 'decrease';
+const INCREASE = 'INCREASE' as const;
+const DECREASE = 'DECREASE' as const;
 
 export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
